@@ -16,7 +16,5 @@ export type Product = {
   isNew: boolean;
   isBestseller: boolean;
   categoryId: number;
-  createdAt: string;
-  updatedAt: string;
 };
   

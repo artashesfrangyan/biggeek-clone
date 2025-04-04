@@ -1,0 +1,22 @@
+.home-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    .products-section {
+        padding: 0 20px;
+        margin-top: 30px;
+
+        >* {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        .products-section {
+            padding: 0 10px;
+        }
+    }
+}
