@@ -1,0 +1,99 @@
+.product-grid {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        padding: 0 15px;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 20px;
+        padding: 0 15px;
+
+        &.items-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.items-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &.items-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+    &.loading {
+        .product-skeleton {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            .skeleton-image {
+                height: 160px;
+                background: #f0f0f0;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+
+            .skeleton-line {
+                height: 12px;
+                background: #f0f0f0;
+                border-radius: 4px;
+                margin-bottom: 8px;
+
+                &.short {
+                    width: 60%;
+                }
+
+                &.medium {
+                    width: 80%;
+                }
+
+                &.long {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        .grid-container {
+
+            &.items-3,
+            &.items-4,
+            &.items-5 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        .grid-container {
+
+            &.items-3,
+            &.items-4,
+            &.items-5 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        .grid-container {
+            grid-template-columns: 1fr !important;
+        }
+    }
+}
