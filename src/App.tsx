@@ -1,7 +1,17 @@
 import React from 'react';
+import { Layout } from './components/Layout';
+import { Home } from './pages/Home';
+import { CartProvider } from './contexts/CartContext';
+import './styles/global.css';
 
-function App() {
-  return <div className="App"></div>;
-}
+const App: React.FC = () => {
+  return (
+    <CartProvider>
+      <Layout>
+        <Home />
+      </Layout>
+    </CartProvider>
+  );
+};
 
 export default App;

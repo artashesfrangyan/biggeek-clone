@@ -1,5 +1,5 @@
 export const HeroBanner = () => (
     <div className="hero-banner">
-      <img src="/assets/images/banner.jpg" alt="Promo" />
+      <img src="/assets/images/banner.png" alt="Promo" />
     </div>
 );
