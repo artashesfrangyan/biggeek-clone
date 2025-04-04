@@ -14,3 +14,9 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
