@@ -12,6 +12,8 @@ export type Product = {
   isNew?: boolean;
   isBestseller?: boolean;
   categoryId: number;
+  slug?: string;
+  description?: string
 };
 
 export type Category = {
@@ -20,12 +22,13 @@ export type Category = {
   slug: string;
   imageUrl?: string;
   parentId?: number | null;
+  icon?: string;
 };
 
 export type CartItem = {
   product: Product;
   quantity: number;
-  addedAt: number; // timestamp
+  addedAt?: number; // timestamp
 };
 
 export type PromoBanner = {
